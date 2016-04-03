@@ -13,7 +13,7 @@ class Tinypngs extends Site_controller {
       ));
   }
   public function index ($psw = '') {
-    if ($psw != md5 (Cfg::setting ('keys', 'tingpng')))
+    if ($psw != md5 (Cfg::setting ('psws', 'tingpng')))
       return $this->output_json (array (
           'status' => false,
         ));
