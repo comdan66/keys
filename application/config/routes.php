@@ -41,6 +41,8 @@
 
 // $route['default_controller'] = "main";
 Route::root ('main');
+Route::get ('tinypngs/clean', 'tinypngs@clean()');
+Route::get ('tinypngs/(:any)', 'tinypngs@index($1)');
 
 // $route['admin'] = "admin/main";
 Route::get ('admin', 'admin/main@index');
